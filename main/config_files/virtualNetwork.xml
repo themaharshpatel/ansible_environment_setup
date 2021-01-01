@@ -1,0 +1,12 @@
+<network>
+  <name>VirtualNetwork</name>
+  <bridge name="virbr1" stp="on" delay="0"/>
+  <mac address="52:54:00:8d:a8:c4"/>
+  <domain name="network1"/>
+  <ip address="10.2.1.1" netmask="255.255.255.0">
+    <dhcp>
+      <range start="10.2.1.128" end="10.2.1.254"/>
+    </dhcp>
+  </ip>
+</network>
+
