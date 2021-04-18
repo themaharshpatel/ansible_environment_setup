@@ -32,7 +32,7 @@ A basic setup which can help you for practicing RHCE: Ansible Automation Exam
 12.	**[Important]** Once all VM are configured run `bash run_after_vm_installation.sh`
 13.	Now your ansible setup has been done
 	1.	Root Password: redhat
-	2.	Users: student, ansible
+	2.	Users: student
 	3.	User Password: redhat
 	4.	VM hostname and IP
 		- servera: 10.2.1.11
