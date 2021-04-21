@@ -2,7 +2,7 @@
 
 if [[ $1 == "" ]] || [[ $2 == "" ]]
 then
-echo "Please write vm_controls [start|stop|reboot|reset] [all|servera|serverb|serverc|serverd|]in parameters"
+echo "Please write vm_controls [start|stop|reboot|reset] [all|servera|serverb|serverc|serverd]in parameters"
 else
 if [[ $1 == "start" ]]
 then
@@ -26,7 +26,7 @@ then
     sudo virsh shutdown --domain serverc
     sudo virsh shutdown --domain serverd
     else
-    sudo virsh start --domain $2
+    sudo virsh shutdown --domain $2
     fi
 
 elif [[ $1 == "reboot" ]]
@@ -43,6 +43,7 @@ then
 
 elif [[ $1 == "reset" ]]
 then
+    rm -f /root/.ssh/known_hosts
     if [[ $2 == "all" ]]
     then
     echo "Restoring servera"
