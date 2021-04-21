@@ -56,11 +56,11 @@ if [[ $(sudo -l -U $USER) == *"(ALL) ALL"* ]]
 	sudo cp config_files/id_rsa /root/.ssh/ && sudo cp config_files/id_rsa.pub /root/.ssh/
 	sudo chmod 500 /root/.ssh/id_rsa 
 cat <<EOF | sudo tee -a /etc/hosts > /dev/null
-10.2.1.11 servera
-10.2.1.12 serverb
-10.2.1.13 serverc
-10.2.1.14 serverd
-10.2.1.1 workstation
+10.2.1.11 servera servera.lab.example.com
+10.2.1.12 serverb serverb.lab.example.com
+10.2.1.13 serverc serverc.lab.example.com
+10.2.1.14 serverd serverd.lab.example.com
+10.2.1.1 workstation workstation.lab.example.com
 EOF
 	echo "Passwordless SSH to virtual machine enabled for root user"
 	sudo cp vm-control.sh /usr/bin/vm-controls
